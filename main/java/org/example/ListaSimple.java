@@ -7,7 +7,6 @@ public class ListaSimple {
     public ListaSimple() {
         cabeza = null;
     }
-    // Insertar un pedido al final
     public void insertar(Pedido pedido) {
         NodoSimple nuevo = new NodoSimple(pedido);
         if (cabeza == null) {
@@ -20,12 +19,10 @@ public class ListaSimple {
         }
         actual.siguiente = nuevo;
     }
-    // Eliminar un pedido por ID
     public Pedido eliminar(int id) {
         if (cabeza == null) {
             return null;
         }
-        // Si el pedido está en la cabeza
         if (cabeza.pedido.getId() == id) {
             Pedido pedidoEliminado = cabeza.pedido;
             cabeza = cabeza.siguiente;
@@ -43,7 +40,6 @@ public class ListaSimple {
         }
         return null;
     }
-    // Mostrar todos los pedidos
     public void mostrar() {
         if (cabeza == null) {
             System.out.println("No hay pedidos pendientes.");
@@ -55,7 +51,6 @@ public class ListaSimple {
             actual = actual.siguiente;
         }
     }
-    // Buscar un pedido
     public Pedido buscar(int id) {
 
         NodoSimple actual = cabeza;

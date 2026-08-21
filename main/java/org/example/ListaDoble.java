@@ -9,7 +9,6 @@ public class ListaDoble {
         cabeza = null;
         cola = null;
     }
-    // Insertar al final
     public void insertar(Pedido pedido) {
 
         NodoDoble nuevo = new NodoDoble(pedido);
@@ -23,7 +22,6 @@ public class ListaDoble {
         nuevo.anterior = cola;
         cola = nuevo;
     }
-    // Mostrar desde el inicio hacia el final
     public void mostrarAdelante() {
         if (cabeza == null) {
             System.out.println("El historial está vacío.");
@@ -35,7 +33,6 @@ public class ListaDoble {
             actual = actual.siguiente;
         }
     }
-    // Mostrar desde el final hacia el inicio
     public void mostrarAtras() {
         if (cola == null) {
             System.out.println("El historial está vacío.");
@@ -48,7 +45,6 @@ public class ListaDoble {
             actual = actual.anterior;
         }
     }
-    // Buscar un pedido
     public Pedido buscar(int id) {
         NodoDoble actual = cabeza;
         while (actual != null) {
